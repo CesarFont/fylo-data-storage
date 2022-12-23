@@ -1,0 +1,44 @@
+@media screen and (min-width: 760px) {
+    body {
+        background-image: url(images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+        background-position: bottom;
+
+        .container {
+            width: clamp(750px, 70vw, 900px);
+            height: clamp(180px, 22vh, 240px);
+            flex-direction: row;
+
+            .downloads {
+                width: 65%;
+                padding: 1.7rem;
+            }
+
+            .info {
+                padding-top: 4rem;
+
+
+                .used {
+                    text-align: left;
+                }
+
+                .left {
+                    top: -2.5rem;
+                    left: 60%;
+                    z-index: 3;
+                }
+                .triangle{
+                    position: absolute;
+                    width: 4rem;
+                    height: 4rem;
+                    z-index: 1;
+                    top: 0;
+                    left: calc(60% + 8rem);
+                    background-color: white;
+                    clip-path: polygon(100% 0, 32% 0, 100% 100%);
+                }
+            }
+        }
+    }
+}

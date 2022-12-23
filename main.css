@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: white;
+  background-color: hsl(229deg, 57%, 11%);
+  background-image: url(images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: clamp(350px, 85vw, 500px);
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.container .downloads {
+  padding: 3rem;
+  border-radius: 10px 50% 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 2rem;
+}
+.container .downloads .logo {
+  width: 10rem;
+  height: 3rem;
+}
+.container .downloads .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.container .downloads .icons img {
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.9rem;
+  background-color: hsl(229deg, 57%, 11%);
+  border-radius: 10px;
+}
+.container .downloads > * {
+  flex-grow: 1;
+}
+.container .info {
+  padding: 2.5rem;
+  border-radius: 10px;
+  position: relative;
+}
+.container .info .used {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.container .info .used span {
+  font-weight: 700;
+}
+.container .info .progress-bar {
+  background-color: hsl(229deg, 57%, 11%);
+  width: 100%;
+  height: 1.8rem;
+  border-radius: 15px;
+  margin-bottom: 0.7rem;
+  padding: 0.2rem;
+}
+.container .info .progress-bar .progess {
+  padding: 0.2rem;
+  height: 100%;
+  width: 81%;
+  border-radius: 15px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 47, 29) 50%, rgb(252, 176, 69) 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 0;
+}
+.container .info .progress-bar .progess .circle {
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  border-radius: 50%;
+}
+.container .info .stored {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 1rem;
+}
+.container .info .stored h3 {
+  font-weight: 700;
+}
+.container .info .left {
+  height: 5rem;
+  width: 12rem;
+  position: absolute;
+  background-color: white;
+  color: hsl(229deg, 57%, 11%);
+  left: calc(50% - 6rem);
+  bottom: -2.5rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.container .info .left h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.container .info .left h3 {
+  font-weight: 700;
+  color: hsl(229deg, 7%, 55%);
+  text-transform: uppercase;
+}
+
+.container > * {
+  background-color: hsl(228deg, 56%, 26%);
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 760px) {
+  body {
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: bottom;
+  }
+  body .container {
+    width: clamp(750px, 70vw, 900px);
+    height: clamp(180px, 22vh, 240px);
+    flex-direction: row;
+  }
+  body .container .downloads {
+    width: 65%;
+    padding: 1.7rem;
+  }
+  body .container .info {
+    padding-top: 4rem;
+  }
+  body .container .info .used {
+    text-align: left;
+  }
+  body .container .info .left {
+    top: -2.5rem;
+    left: 60%;
+    z-index: 3;
+  }
+  body .container .info .triangle {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    z-index: 1;
+    top: 0;
+    left: calc(60% + 8rem);
+    background-color: white;
+    -webkit-clip-path: polygon(100% 0, 32% 0, 100% 100%);
+            clip-path: polygon(100% 0, 32% 0, 100% 100%);
+  }
+}/*# sourceMappingURL=main.css.map */
