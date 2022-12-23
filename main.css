@@ -166,15 +166,25 @@ body {
     padding: 1.7rem;
   }
   body .container .info {
-    padding-top: 4rem;
+    height: 80%;
+    align-self: flex-end;
   }
   body .container .info .used {
     text-align: left;
   }
   body .container .info .left {
-    top: -2.5rem;
+    height: 4rem;
+    width: 10rem;
+    top: -2rem;
     left: 60%;
     z-index: 3;
+    gap: 0.5rem;
+  }
+  body .container .info .left h1 {
+    font-size: 2rem;
+  }
+  body .container .info .left h3 {
+    font-size: 1rem;
   }
   body .container .info .triangle {
     position: absolute;
@@ -182,7 +192,7 @@ body {
     height: 4rem;
     z-index: 1;
     top: 0;
-    left: calc(60% + 8rem);
+    left: calc(60% + 6rem);
     background-color: white;
     -webkit-clip-path: polygon(100% 0, 32% 0, 100% 100%);
             clip-path: polygon(100% 0, 32% 0, 100% 100%);
